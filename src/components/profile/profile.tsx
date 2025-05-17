@@ -16,7 +16,7 @@ export default function profile() {
                 className={styles.profile_picture}
             />
 
-            <div>
+            <div className={styles.infos}>
                 <h2 className={styles.info}> Dayamond </h2>
                 <h2 className={styles.info}> Quentin T'JAMPENS </h2>
                 <h2 className={styles.info}> 19 ANS </h2>
