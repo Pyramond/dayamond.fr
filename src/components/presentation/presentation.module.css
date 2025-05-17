@@ -1,0 +1,15 @@
+.presentation {
+    margin-top: 3em;
+}
+
+.title {
+    font-family: Bebas Neue, serif;
+    color: var(--color4);
+    font-size: 7rem;
+}
+
+.content {
+    font-family: Space Grotesk, serif;
+    color: var(--color5);
+    font-size: 2em;
+}
