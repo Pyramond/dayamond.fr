@@ -1,0 +1,17 @@
+.profile {
+    margin: 3em;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.profile_picture {
+    border-radius: 18%;
+    margin-bottom: 2em;
+}
+
+.info {
+    color: var(--color4);
+    font-family: Bebas Neue;
+    font-size: 1.5em;
+}
