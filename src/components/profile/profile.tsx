@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import styles from "./profile.module.css"
+import Switch from "../switch/switch";
 
 export default function profile() {
 
@@ -25,6 +26,8 @@ export default function profile() {
                 <h2 className={styles.info}> 19 ANS </h2>
                 <h2 className={styles.info}> BUT INFO, LYON 1 </h2>
             </div>
+
+            <Switch />
 
             <div className={styles.socials}>
 
