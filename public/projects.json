@@ -11,10 +11,15 @@
   {
     "title": "dayamond.fr",
     "year": "2025",
-    "description": "Ce site est une sorte de portfolio et de site de présentation. Il permet de découvrir mes projets et d'en savoir plus sur moi. À noter que mon site ne contient pas l'ensemble de mes projets, mais seulement les plus pertinents. Ce site est codé avec le framework NextJS.\n\n",
+    "description": "Ce site est une sorte de portfolio et de site de présentation. Il permet de découvrir mes projets et d'en savoir plus sur moi. À noter que mon site ne contient pas l'ensemble de mes projets, mais seulement les plus pertinents. Ce site est codé avec le framework NextJS.",
     "source": {
       "title": "github",
       "url": "https://github.com/Pyramond/dayamond.fr"
     }
+  },
+  {
+    "title": "Recipe book",
+    "year": "2025",
+    "description": "Une application iOS créée avec React Native et Firebase. Elle a pour but de gérer les recettes de cuisine d'un utilisateur. Avec cette application, on peut ajouter, supprimer et consulter ses recettes. Le dépôt Git n'est pas encore accessible. Elle devrait être publiée sur l'App Store à la fin de son développement."
   }
 ]
