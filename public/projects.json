@@ -1,0 +1,20 @@
+[
+  {
+    "title": "OneBlind",
+    "year": "2023-2025",
+    "description": "OneBlind est un directeur de poker en ligne. Il permet de gérer une partie de poker, y compris les blinds, les recaves et les joueurs. OneBlind offre la possibilité de créer sa propre structure de blinds, d'ajouter des joueurs, de consulter l'historique des parties et bien plus encore. Ce projet a été codé avec React et FastAPI.",
+    "source": {
+      "title": "github",
+      "url": "https://github.com/Pyramond/OneBlind"
+    }
+  },
+  {
+    "title": "dayamond.fr",
+    "year": "2025",
+    "description": "Ce site est une sorte de portfolio et de site de présentation. Il permet de découvrir mes projets et d'en savoir plus sur moi. À noter que mon site ne contient pas l'ensemble de mes projets, mais seulement les plus pertinents. Ce site est codé avec le framework NextJS.\n\n",
+    "source": {
+      "title": "github",
+      "url": "https://github.com/Pyramond/dayamond.fr"
+    }
+  }
+]
