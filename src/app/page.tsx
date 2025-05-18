@@ -18,7 +18,7 @@ export default function Home() {
       <div className="flex flex-row">
           <Profile />
           <Separator />
-          {components[value+1]}
+          {components[value]}
       </div>
   );
 }
