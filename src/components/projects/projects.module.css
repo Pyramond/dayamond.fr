@@ -50,3 +50,10 @@
     cursor: pointer;
     opacity: 0.8;
 }
+
+.projectsList {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 4rem;
+}
