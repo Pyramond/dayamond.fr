@@ -10,7 +10,7 @@ import Stack from "@/components/stack/stack";
 
 export default function Home() {
 
-    const { value, setValue } = useContext(PageContext);
+    const { value } = useContext(PageContext);
 
     const components = [<Presentation />, <Stack />];
 
