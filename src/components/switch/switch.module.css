@@ -1,0 +1,26 @@
+.switch {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    position: relative;
+    left: 2em;
+    margin-top: 1em
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--secondary);
+    padding: 2px 7px 2px 7px;
+    border-radius: 5px;
+}
+
+.button:hover {
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.image {
+    color: var(--color4);
+}
