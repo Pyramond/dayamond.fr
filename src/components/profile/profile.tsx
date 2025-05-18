@@ -3,11 +3,20 @@
 import Image from "next/image";
 import styles from "./profile.module.css"
 import Switch from "../switch/switch";
+import {useEffect, useState} from "react";
+import Infos from "@/components/profile/infos.interface";
+import calculateAge from "@/utils/calculateAge";
 
 export default function profile() {
 
     const PROFILE_PICTURE = "/profile-picture.png";
-    const GITHUB_LINK = "https://github.com/Pyramond"
+    const [data, setData] = useState<Infos | null>(null);
+
+    useEffect(() => {
+        fetch(`${process.env.NEXT_PUBLIC_URL}/infos.json`, { cache: "no-store" })
+            .then(res => res.json())
+            .then(data => setData(data));
+    }, [])
 
     return (
         <div className={styles.profile}>
@@ -21,10 +30,11 @@ export default function profile() {
             />
 
             <div className={styles.infos}>
-                <h2 className={styles.info}> Dayamond </h2>
-                <h2 className={styles.info}> Quentin T'JAMPENS </h2>
-                <h2 className={styles.info}> 19 ANS </h2>
-                <h2 className={styles.info}> BUT INFO, LYON 1 </h2>
+                <h2 className={styles.info}> {data?.pseudo} </h2>
+                <h2 className={styles.info}> {data?.name} </h2>
+                <h2 className={styles.info}> {data ? `${calculateAge(data?.birth)} ANS` : undefined} </h2>
+                <h2 className={styles.info}> {data?.city} </h2>
+                <h2 className={styles.info}> {data?.school} </h2>
             </div>
 
             <Switch />
@@ -36,7 +46,7 @@ export default function profile() {
                     width={50}
                     height={50}
                     alt={"GutHub dark"}
-                    onClick={() => { window.open(GITHUB_LINK, '_blank') }}
+                    onClick={() => { window.open(data?.github, '_blank') }}
                     className={styles.social}
                 />
 
