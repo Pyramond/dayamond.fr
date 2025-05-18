@@ -1,0 +1,28 @@
+{
+  "languages": [
+    "cpp",
+    "css",
+    "html",
+    "java",
+    "js",
+    "ts",
+    "python"
+  ],
+  "libs": [
+    "fastapi",
+    "nodejs",
+    "nextjs",
+    "react",
+    "redux",
+    "reactrouter"
+  ],
+  "others": [
+    "docker",
+    "git",
+    "linux",
+    "mariadb",
+    "npm",
+    "sqlite",
+    "vitejs"
+  ]
+}
