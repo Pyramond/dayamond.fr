@@ -1,20 +1,22 @@
+'use client'
+import { useEffect, useState } from "react";
 import styles from "./presentation.module.css";
 
-export default async function Presentation() {
+export default function Presentation() {
+    const [data, setData] = useState<{presentation?: string} | null>(null);
 
-    const res = await fetch("http://localhost:3000/presentation.json", {
-        cache: "no-store",
-    });
-    const data = await res.json();
+    useEffect(() => {
+        fetch("http://localhost:3000/presentation.json", { cache: "no-store" })
+            .then(res => res.json())
+            .then(data => setData(data));
+    }, []);
+
+    if (!data) return <div className={styles.presentation}>Chargement…</div>;
 
     return (
         <div className={styles.presentation}>
-
             <h1 className={styles.title}>Presentation</h1>
-            <p className={styles.content}>
-                {data.presentation}
-            </p>
-
+            <p className={styles.content}>{data.presentation}</p>
         </div>
-    )
+    );
 }
