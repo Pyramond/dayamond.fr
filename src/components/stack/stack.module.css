@@ -7,3 +7,15 @@
     color: var(--color4);
     font-size: 7rem;
 }
+
+.subtitle {
+    font-family: Bebas Neue, serif;
+    color: var(--color4);
+    font-size: 3rem;
+}
+
+.skillList {
+    display: flex;
+    gap: 1em;
+    margin: 2em 0 2em 3em;
+}
