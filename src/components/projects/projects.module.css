@@ -9,5 +9,44 @@
 }
 
 .projectCard {
+    background-color: var(--secondary);
+    width: 45vh;
+    height: 30vh;
+    border-radius: 2rem;
+    padding: 1rem;
+    overflow: hidden;
+}
 
+.text {
+    color: var(--color4);
+    font-family: "Space Grotesk", serif;
+}
+
+.cardTitle {
+    color: var(--color4);
+    font-family: Bebas Neue, serif;
+    font-size: 3rem;
+}
+
+.headerTitle {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: baseline;
+    gap: 0.5rem;
+}
+
+.year {
+    opacity: 0.8;
+}
+
+.cardHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.openProject:hover {
+    cursor: pointer;
+    opacity: 0.8;
 }
