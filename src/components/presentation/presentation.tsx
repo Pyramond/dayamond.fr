@@ -6,7 +6,7 @@ export default function Presentation() {
     const [data, setData] = useState<{presentation?: string} | null>(null);
 
     useEffect(() => {
-        fetch("http://localhost:3000/presentation.json", { cache: "no-store" })
+        fetch(`${process.env.NEXT_PUBLIC_URL}/presentation.json`, { cache: "no-store" })
             .then(res => res.json())
             .then(data => setData(data));
     }, []);

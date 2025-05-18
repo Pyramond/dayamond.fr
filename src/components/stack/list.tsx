@@ -13,7 +13,7 @@ export default function List({ type, size }: Props) {
     const [items, setItems] = useState<Array<string> | null>(null);
 
     useEffect(() => {
-        fetch("http://localhost:3000/skills.json", { cache: "no-store" })
+        fetch(`${process.env.NEXT_PUBLIC_URL}/skills.json`, { cache: "no-store" })
             .then(res => res.json())
             .then(data => setItems(data[type]));
     }, []);
