@@ -1,17 +1,8 @@
 import styles from "./projects.module.css"
 import Image from "next/image"
+import Project from "./project.interface"
 
-interface Props {
-    title: string;
-    description: string;
-    year: number;
-    source?: {
-        title: "github" | "other";
-        url: string;
-    }
-}
-
-export default function ProjectCard({ title, description, year, source }: Props) {
+export default function ProjectCard({ title, description, year, source }: Project) {
 
     function handleClick() {
         window.open(source?.url, '_blank')
