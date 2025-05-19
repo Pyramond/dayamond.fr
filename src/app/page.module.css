@@ -1,12 +1,12 @@
 @media (max-width: 768px) {
-    .root {
+    .container {
         flex-direction: column !important;
     }
     .separator {
         display: none;
     }
 }
-.root {
+.container {
     display: flex;
     flex-direction: row;
 }
