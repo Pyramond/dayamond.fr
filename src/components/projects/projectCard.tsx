@@ -26,6 +26,7 @@ export default function ProjectCard({ title, description, year, source }: Projec
                             height={40}
                             width={40}
                             alt={"GitHub"}
+                            className={styles.projectLink}
                         />
                     </div>
                         :

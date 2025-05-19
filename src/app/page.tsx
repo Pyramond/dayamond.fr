@@ -1,5 +1,6 @@
 'use client'
 
+import styles from "./page.module.css"
 import { useContext } from "react";
 import { PageContext } from "@/context/page-context";
 import Presentation from "@/components/presentation/presentation";
@@ -16,9 +17,9 @@ export default function Home() {
     const components = [<Presentation />, <Stack />, <Projects />];
 
   return (
-      <div className="flex flex-row">
+      <div className={styles.container}>
           <Profile />
-          <Separator />
+          <Separator className={ styles.separator } />
           {components[value]}
       </div>
   );

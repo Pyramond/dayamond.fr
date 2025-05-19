@@ -57,3 +57,30 @@
     flex-wrap: wrap;
     gap: 4rem;
 }
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 4rem;
+        margin: 1rem;
+    }
+
+    .projectCard {
+        margin: 1rem;
+    }
+
+    .text {
+        font-size: 0.8rem
+    }
+
+    .cardTitle {
+        font-size: 2rem;
+    }
+
+    .projectsList {
+        gap: 0;
+    }
+
+    .projectLink {
+        height: 2rem;
+    }
+}

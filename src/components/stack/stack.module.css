@@ -19,3 +19,19 @@
     gap: 1em;
     margin: 2em 0 2em 3em;
 }
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 4rem;
+        margin: 1rem;
+    }
+
+    .subtitle {
+        font-size: 2rem;
+        margin: 1rem;
+    }
+
+    .skillList {
+        flex-wrap: wrap;
+    }
+}

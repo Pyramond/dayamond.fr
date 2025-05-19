@@ -1,7 +1,11 @@
 import styles from "./separator.module.css"
 
-export default function Separator() {
+interface SeparatorProps {
+    className?: string;
+}
+
+export default function Separator({ className }: SeparatorProps) {
     return (
-        <div className={styles.separator} />
-    )
+        <div className={`${styles.separator} ${className ? className : ''}`} />
+    );
 }

@@ -13,3 +13,15 @@
     color: var(--color5);
     font-size: 2em;
 }
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 4rem;
+        margin: 1rem;
+    }
+
+    .content {
+        font-size: 1.5rem;
+        margin: 1rem;
+    }
+}

@@ -32,3 +32,9 @@
     opacity: 0.7;
     cursor: pointer;
 }
+
+@media (max-width: 768px) {
+    .profile {
+        align-items: baseline;
+    }
+}
