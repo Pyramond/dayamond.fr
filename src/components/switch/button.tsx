@@ -1,6 +1,6 @@
 import styles from "./switch.module.css"
 import Image from "next/image";
-import { redirect } from "next/navigation";
+import { useRouter } from "next/navigation";
 import { usePathname} from "next/navigation";
 
 interface Props {
@@ -12,10 +12,11 @@ export default function Button({ image, page }: Props) {
 
     const SIZE: number = 30;
     const pathname = usePathname();
+    const router = useRouter();
 
 
     function handleClick() {
-        redirect(page)
+        router.replace(page)
     }
 
     return (
