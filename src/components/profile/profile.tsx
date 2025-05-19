@@ -9,7 +9,7 @@ import calculateAge from "@/utils/calculateAge";
 
 export default function profile() {
 
-    const PROFILE_PICTURE = "/profile-picture.png";
+    const PROFILE_PICTURE = "/images/profile-picture.png";
     const [data, setData] = useState<Infos | null>(null);
 
     useEffect(() => {
@@ -42,10 +42,10 @@ export default function profile() {
             <div className={styles.socials}>
 
                 <Image
-                    src={"/GitHub_dark.svg"}
+                    src={"/images/github.svg"}
                     width={50}
                     height={50}
-                    alt={"GutHub dark"}
+                    alt={"Github"}
                     onClick={() => { window.open(data?.github, '_blank') }}
                     className={styles.social}
                 />

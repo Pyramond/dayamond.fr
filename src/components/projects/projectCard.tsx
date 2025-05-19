@@ -22,7 +22,7 @@ export default function ProjectCard({ title, description, year, source }: Projec
                     source ?
                         <div className={styles.openProject} onClick={handleClick}>
                         <Image
-                            src={source.title === "github" ? "/GitHub_dark.svg" : "/link.svg"}
+                            src={source.title === "github" ? "/images/github.svg" : "/images/link.svg"}
                             height={40}
                             width={40}
                             alt={"GitHub"}

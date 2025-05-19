@@ -22,7 +22,7 @@ export default function Button({ image, page }: Props) {
     return (
         <div className={styles.button} onClick={handleClick} style={{ opacity: pathname == page ? 0.5 : 1 }}>
             <Image
-                src={`/${image}.svg`}
+                src={`/images/${image}.svg`}
                 width={SIZE}
                 height={SIZE}
                 alt={image}

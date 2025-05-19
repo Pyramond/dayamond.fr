@@ -22,7 +22,7 @@ export default function List({ type, size }: Props) {
         <div className={styles.skillList}>
             {items?.map((item, index) => (
                 <Image
-                    src={`/${type}/${item}.svg`}
+                    src={`/images/${type}/${item}.svg`}
                     width={size}
                     height={size}
                     alt={item}
