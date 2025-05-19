@@ -1,24 +1,25 @@
-import { PageContext } from "@/context/page-context";
 import styles from "./switch.module.css"
 import Image from "next/image";
-import {useContext} from "react";
+import { redirect } from "next/navigation";
+import { usePathname} from "next/navigation";
 
 interface Props {
-    n: number,
-    image: string
+    image: string,
+    page: string,
 }
 
-export default function Button({ n, image }: Props) {
+export default function Button({ image, page }: Props) {
 
     const SIZE: number = 30;
-    const { value, setValue } = useContext(PageContext);
+    const pathname = usePathname();
+
 
     function handleClick() {
-        setValue(n);
+        redirect(page)
     }
 
     return (
-        <div className={styles.button} onClick={handleClick} style={{ opacity: n == value ? 0.5 : 1 }}>
+        <div className={styles.button} onClick={handleClick} style={{ opacity: pathname == page ? 0.5 : 1 }}>
             <Image
                 src={`/${image}.svg`}
                 width={SIZE}

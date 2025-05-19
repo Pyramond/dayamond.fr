@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Bebas_Neue, Space_Grotesk } from "next/font/google";
 import "./globals.css";
-import PageProvider from "@/context/page-context";
+import styles from "@/app/page.module.css";
+import Profile from "@/components/profile/profile";
+import Separator from "@/components/separator/separator";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -35,13 +37,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="fr">
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${Bebas.variable} ${SpaceGrotesk.variable} antialiased`}
       >
-        <PageProvider>
-            {children}
-        </PageProvider>
+            <div className={styles.container}>
+                <div className={styles.left}>
+                    <Profile />
+                    <Separator className={styles.separator} />
+                </div>
+                <div className={styles.right}>
+                    {children}
+                </div>
+            </div>
       </body>
     </html>
   );
