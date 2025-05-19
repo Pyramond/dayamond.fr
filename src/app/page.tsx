@@ -18,9 +18,14 @@ export default function Home() {
 
   return (
       <div className={styles.container}>
-          <Profile />
-          <Separator className={ styles.separator } />
-          {components[value]}
+          <div className={styles.left}>
+              <Profile />
+              <Separator className={styles.separator} />
+          </div>
+          <div className={styles.right}>
+              {components[value]}
+          </div>
       </div>
+
   );
 }
