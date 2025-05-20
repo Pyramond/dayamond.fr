@@ -1,5 +1,7 @@
 import styles from "./stack.module.css"
 import Image from "next/image";
+import { promises as fs } from "fs";
+import path from "path";
 
 interface Props {
     type: string;
@@ -7,8 +9,9 @@ interface Props {
 }
 
 async function getImages(type: string): Promise<Array<string>> {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/skills.json`, { cache: "no-store" });
-    const data = await res.json();
+    const filePath = path.join(process.cwd(), "public", "skills.json");
+    const file = await fs.readFile(filePath, "utf-8");
+    const data = JSON.parse(file);
     return data[type] || [];
 }
 
