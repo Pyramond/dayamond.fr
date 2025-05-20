@@ -6,6 +6,7 @@ import Switch from "../switch/switch";
 import {useEffect, useState} from "react";
 import Infos from "@/components/profile/infos.interface";
 import calculateAge from "@/utils/calculateAge";
+import Socials from "@/components/socials/socials";
 
 export default function profile() {
 
@@ -40,16 +41,7 @@ export default function profile() {
             <Switch />
 
             <div className={styles.socials}>
-
-                <Image
-                    src={"/images/github.svg"}
-                    width={50}
-                    height={50}
-                    alt={"Github"}
-                    onClick={() => { window.open(data?.github, '_blank') }}
-                    className={styles.social}
-                />
-
+                <Socials />
             </div>
 
         </div>
