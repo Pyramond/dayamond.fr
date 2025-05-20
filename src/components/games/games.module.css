@@ -28,6 +28,10 @@
     }
 
     .listGames {
-        gap: 2rem;
+        gap: 1rem;
+    }
+
+    .gameItem {
+        margin: 1em;
     }
 }
