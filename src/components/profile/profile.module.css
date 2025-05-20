@@ -37,4 +37,7 @@
     .profile {
         align-items: baseline;
     }
+    .socials {
+        display: none;
+    }
 }
