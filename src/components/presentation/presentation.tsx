@@ -1,15 +1,18 @@
-'use client'
-import { useEffect, useState } from "react";
 import styles from "./presentation.module.css";
 
-export default function Presentation() {
-    const [data, setData] = useState<{presentation?: string} | null>(null);
+interface Presentation {
+    presentation: string;
+}
 
-    useEffect(() => {
-        fetch(`${process.env.NEXT_PUBLIC_URL}/presentation.json`, { cache: "no-store" })
-            .then(res => res.json())
-            .then(data => setData(data));
-    }, []);
+async function getPresentation(): Promise<Presentation> {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/presentation.json`, { cache: "no-store" });
+    const data = await res.json();
+    return data || {};
+}
+
+export default async function Presentation() {
+
+    const data: Presentation = await getPresentation();
 
     return (
         <div className={styles.presentation}>
