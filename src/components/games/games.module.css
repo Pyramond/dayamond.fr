@@ -8,6 +8,19 @@
     font-size: 7rem;
 }
 
+.listGames {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 4rem;
+    margin-bottom: 4rem;
+    justify-content: center;
+}
+
+.gameItem {
+    border-radius: 1em;
+}
+
 @media (max-width: 768px) {
     .title {
         font-size: 4rem;
