@@ -1,5 +1,3 @@
-"use client"
-
 import styles from "./stack.module.css";
 import List from "@/components/stack/list";
 

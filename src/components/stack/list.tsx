@@ -1,26 +1,23 @@
-import {useEffect, useState} from "react";
 import styles from "./stack.module.css"
 import Image from "next/image";
-
 
 interface Props {
     type: string;
     size: number;
 }
 
-export default function List({ type, size }: Props) {
+async function getImages(type: string): Promise<Array<string>> {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/skills.json`, { cache: "no-store" });
+    const data = await res.json();
+    return data[type] || [];
+}
 
-    const [items, setItems] = useState<Array<string> | null>(null);
-
-    useEffect(() => {
-        fetch(`${process.env.NEXT_PUBLIC_URL}/skills.json`, { cache: "no-store" })
-            .then(res => res.json())
-            .then(data => setItems(data[type]));
-    }, []);
+export default async function List({ type, size }: Props) {
+    const items = await getImages(type);
 
     return (
         <div className={styles.skillList}>
-            {items?.map((item, index) => (
+            {items.map((item, index) => (
                 <Image
                     src={`/images/${type}/${item}.svg`}
                     width={size}
@@ -30,5 +27,5 @@ export default function List({ type, size }: Props) {
                 />
             ))}
         </div>
-    )
-};
+    );
+}
