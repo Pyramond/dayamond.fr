@@ -24,6 +24,11 @@
     "mariadb",
     "npm",
     "sqlite",
-    "vitejs"
+    "vitejs",
+    "firebase",
+    "vscode",
+    "jetbrains",
+    "webstorm",
+    "pycharm"
   ]
 }
