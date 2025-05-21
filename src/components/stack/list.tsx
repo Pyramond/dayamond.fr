@@ -2,24 +2,17 @@
 
 import styles from "./stack.module.css"
 import Image from "next/image";
-import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
 interface Props {
     type: string;
     size: number;
+    items: Array<string>;
 }
 
-export default function List({ type, size }: Props) {
+export default function List({ type, size, items }: Props) {
 
-    const [items, setItems] = useState<Array<string>>([]);
     const MotionImage = motion(Image);
-
-    useEffect(() => {
-        fetch(`${process.env.NEXT_PUBLIC_URL}/skills.json`, { cache: "no-store" })
-            .then(res => res.json())
-            .then(data => setItems(data[type]));
-    }, []);
 
     return (
         <div className={styles.skillList}>
