@@ -1,32 +1,41 @@
+'use client'
+
 import styles from "./stack.module.css"
 import Image from "next/image";
-import { promises as fs } from "fs";
-import path from "path";
+import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 
 interface Props {
     type: string;
     size: number;
 }
 
-async function getImages(type: string): Promise<Array<string>> {
-    const filePath = path.join(process.cwd(), "public", "skills.json");
-    const file = await fs.readFile(filePath, "utf-8");
-    const data = JSON.parse(file);
-    return data[type] || [];
-}
+export default function List({ type, size }: Props) {
 
-export default async function List({ type, size }: Props) {
-    const items = await getImages(type);
+    const [items, setItems] = useState<Array<string>>([]);
+    const MotionImage = motion(Image);
+
+    useEffect(() => {
+        fetch(`${process.env.NEXT_PUBLIC_URL}/skills.json`, { cache: "no-store" })
+            .then(res => res.json())
+            .then(data => setItems(data[type]));
+    }, []);
 
     return (
         <div className={styles.skillList}>
             {items.map((item, index) => (
-                <Image
+                <MotionImage
                     src={`/images/${type}/${item}.svg`}
                     width={size}
                     height={size}
                     alt={item}
                     key={index}
+                    whileHover={{
+                        scale: 1.10,
+                        rotate: -3,
+                        zIndex: 1,
+                        transition: { type: "spring", stiffness: 300 }
+                    }}
                 />
             ))}
         </div>
