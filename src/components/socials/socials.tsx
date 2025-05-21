@@ -7,7 +7,11 @@ interface SocialType {
     url: string;
 }
 
-export default function Socials() {
+interface Props {
+    size: number;
+}
+
+export default function Socials({ size }: Props) {
 
     const [socials, setSocials] = useState<Array<SocialType>>([]);
 
@@ -22,8 +26,8 @@ export default function Socials() {
             {socials.map((social: SocialType, index: number) => (
                 <Image
                     src={`/images/${social.name}.svg`}
-                    width="50"
-                    height="50"
+                    width={size}
+                    height={size}
                     alt={social.name}
                     key={index}
                     onClick={() => { window.open(social.url, '_blank') }}
