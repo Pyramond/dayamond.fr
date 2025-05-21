@@ -36,12 +36,15 @@ export default function profile() {
                 <h2 className={styles.info}> {data ? `${calculateAge(data?.birth)} ANS` : undefined} </h2>
                 <h2 className={styles.info}> {data?.city} </h2>
                 <h2 className={styles.info}> {data?.school} </h2>
+
+                <div className={styles.socials}>
+                    <h2 className={styles.subtitle}>SOCIAL:</h2>
+                    <div className={styles.socialComponent}> <Socials size={40} /> </div>
+                </div>
             </div>
 
-            <Switch />
-
-            <div className={styles.socials}>
-                <Socials />
+            <div className={styles.switchComponent}>
+                <Switch />
             </div>
 
         </div>
