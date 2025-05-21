@@ -4,7 +4,6 @@ import "./globals.css";
 import styles from "@/app/page.module.css";
 import Profile from "@/components/profile/profile";
 import Separator from "@/components/separator/separator";
-import PageTransition from "@/components/PageTransition/PageTransition";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -48,9 +47,7 @@ export default function RootLayout({
                     <Separator className={styles.separator} />
                 </div>
                 <div className={styles.right}>
-                    <PageTransition>
-                        {children}
-                    </PageTransition>
+                    {children}
                 </div>
             </div>
       </body>
