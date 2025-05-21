@@ -1,9 +1,12 @@
 import styles from "./stack.module.css";
 import List from "@/components/stack/list";
+import path from "path";
+import {promises as fs} from "fs";
 
 async function getData(): Promise<Record<string, string[]>> {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/skills.json`, { cache: "no-store" });
-    const data = await res.json();
+    const filePath = path.join(process.cwd(), "public", "skills.json");
+    const file = await fs.readFile(filePath, "utf-8");
+    const data = JSON.parse(file);
     return data || [];
 }
 
