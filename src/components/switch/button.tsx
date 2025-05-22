@@ -1,7 +1,10 @@
+'use client'
+
 import styles from "./switch.module.css"
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { usePathname} from "next/navigation";
+import { motion } from "framer-motion";
 
 interface Props {
     image: string,
@@ -20,7 +23,15 @@ export default function Button({ image, page }: Props) {
     }
 
     return (
-        <div className={styles.button} onClick={handleClick} style={{ opacity: pathname == page ? 0.5 : 1 }}>
+        <motion.div
+            className={styles.button}
+            onClick={handleClick}
+            style={{ opacity: pathname == page ? 0.5 : 1 }}
+            whileHover={{
+                scale: 1.2,
+                y: -5
+        }}
+        >
             <Image
                 src={`/images/${image}.svg`}
                 width={SIZE}
@@ -28,6 +39,6 @@ export default function Button({ image, page }: Props) {
                 alt={image}
                 className={styles.image}
             />
-        </div>
+        </motion.div>
     )
 };
