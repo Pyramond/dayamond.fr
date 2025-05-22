@@ -1,6 +1,7 @@
 import styles from "./presentation.module.css";
 import { promises as fs } from "fs";
 import path from "path";
+import { PresentationText } from "@/components/presentation/presentation-text";
 
 
 interface Presentation {
@@ -22,7 +23,7 @@ export default async function Presentation() {
     return (
         <div className={styles.presentation}>
             <h1 className={styles.title}>Presentation</h1>
-            <p className={styles.content}>{data ? data.presentation : "chargement..."}</p>
+            <PresentationText presentation={data ? data.presentation : "chargement..."} />
         </div>
     );
 }
