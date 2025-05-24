@@ -5,3 +5,9 @@
     background-color: var(--tertiary);
     margin: 3em;
 }
+
+@media (min-width: 1921px) {
+    .separator {
+        margin: 3em 3em 3em 0;
+    }
+}
