@@ -12,13 +12,18 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    gap: 4rem;
+    gap: 1.5vw;
     margin-bottom: 4rem;
     justify-content: center;
+    padding: 2rem;
 }
 
 .gameItem {
     border-radius: 1em;
+    flex: 1 0 30%;
+    max-width: 30%;
+    box-sizing: border-box;
+
 }
 
 @media (max-width: 768px) {
@@ -29,9 +34,12 @@
 
     .listGames {
         gap: 1rem;
+        padding: 1rem;
     }
 
     .gameItem {
         margin: 1em;
+        flex-basis: 100%;
+        max-width: 100%;
     }
 }
