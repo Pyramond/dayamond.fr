@@ -4,7 +4,7 @@ const nextConfig: NextConfig = {
     async redirects() {
         return [
             {
-                source: '/githubt',
+                source: '/github',
                 destination: 'https://github.com/Pyramond',
                 permanent: false
             },
