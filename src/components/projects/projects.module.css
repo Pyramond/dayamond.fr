@@ -8,6 +8,14 @@
     margin-top: 3em;
 }
 
+.projectsList {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2rem; /* ICI */
+    margin-bottom: 4rem;
+}
+
 .projectCard {
     background-color: var(--secondary);
     width: 45vh;
@@ -20,6 +28,7 @@
 .text {
     color: var(--color4);
     font-family: "Space Grotesk", serif;
+    font-size: 0.9rem; /* ICI */
 }
 
 .cardTitle {
@@ -51,12 +60,14 @@
     opacity: 0.8;
 }
 
-.projectsList {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 4rem;
-    margin-bottom: 4rem;
+@media (min-width: 1920px) {
+    .text {
+        font-size: 1.2rem;
+    }
+
+    .projectsList {
+        gap: 3rem;
+    }
 }
 
 @media (max-width: 768px) {
