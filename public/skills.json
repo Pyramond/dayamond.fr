@@ -1,21 +1,21 @@
 {
   "languages": [
     "cpp",
-    "css",
-    "html",
     "java",
+    "python",
+    "html",
+    "css",
     "js",
-    "ts",
-    "python"
+    "ts"
   ],
   "libs": [
-    "fastapi",
-    "nodejs",
-    "nextjs",
     "react",
     "react-native",
+    "nextjs",
+    "reactrouter",
     "redux",
-    "reactrouter"
+    "nodejs",
+    "fastapi"
   ],
   "others": [
     "docker",
