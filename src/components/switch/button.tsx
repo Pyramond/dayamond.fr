@@ -30,7 +30,11 @@ export default function Button({ image, page }: Props) {
             whileHover={{
                 scale: 1.2,
                 y: -5
-        }}
+            }}
+            whileTap={{
+                scale: 0.8,
+                y: 0,
+            }}
         >
             <Image
                 src={`/images/${image}.svg`}
