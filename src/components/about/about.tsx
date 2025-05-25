@@ -11,6 +11,7 @@ export default function About() {
 
             <div className={styles.site}>
                 <h2 className={styles.subtitle}>Site</h2>
+                <p className={styles.text}>Quelques petits détails sur ce site :</p>
                 <Iconography />
                 <SiteStack />
             </div>

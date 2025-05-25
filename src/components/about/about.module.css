@@ -12,13 +12,19 @@
     font-family: Bebas Neue, serif;
     color: var(--color4);
     font-size: 3rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
 .site {
     margin-top: 3rem;
 }
 
+.text {
+    font-family: "Space Grotesk", sans-serif;
+    color: var(--color4);
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
 
 @media (max-width: 768px) {
 
@@ -29,6 +35,10 @@
 
     .subtitle {
         font-size: 2rem;
+        margin: 1rem;
+    }
+
+    .text {
         margin: 1rem;
     }
 }
