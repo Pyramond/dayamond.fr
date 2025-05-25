@@ -11,3 +11,11 @@
     color: var(--color4);
     margin-left: 1rem;
 }
+
+@media (max-width: 768px) {
+
+    .subtitle {
+        font-size: 1.5rem;
+        margin: 1rem;
+    }
+}
