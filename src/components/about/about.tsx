@@ -1,6 +1,7 @@
 import styles from "./about.module.css"
 import Contact from "./contact/contact"
 import Iconography from "@/components/about/iconography/iconography";
+import SiteStack from "@/components/about/siteStack/siteStack";
 
 export default function About() {
     return (
@@ -11,6 +12,7 @@ export default function About() {
             <div className={styles.site}>
                 <h2 className={styles.subtitle}>Site</h2>
                 <Iconography />
+                <SiteStack />
             </div>
         </div>
     )
