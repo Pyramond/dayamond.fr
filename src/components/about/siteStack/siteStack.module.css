@@ -2,4 +2,12 @@
     font-family: Bebas Neue, serif;
     color: var(--color4);
     font-size: 2rem;
+    margin-top: 1rem;
+}
+
+.stackList {
+    display: flex;
+    flex-direction: column;
+    color: var(--color4);
+    margin-left: 1rem;
 }
