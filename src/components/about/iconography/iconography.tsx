@@ -1,4 +1,3 @@
-import globalStyles from "@/components/about/about.module.css";
 import styles from "./iconography.module.css"
 import path from "path";
 import {promises as fs} from "fs";
