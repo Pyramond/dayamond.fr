@@ -1,0 +1,20 @@
+.contactValue {
+    font-family: "Space Grotesk", serif;
+    color: var(--color4);
+    font-size: 1rem;
+}
+
+.contactList {
+    margin-left: 1rem;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.contactItem {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
