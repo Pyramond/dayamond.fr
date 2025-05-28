@@ -24,3 +24,9 @@
 .image {
     color: var(--color4);
 }
+
+@media (max-width: 768px) {
+    .switch {
+        left: 0;
+    }
+}

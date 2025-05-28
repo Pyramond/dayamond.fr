@@ -46,6 +46,7 @@
         align-items: baseline;
         margin-bottom: 0;
     }
+
     .socials {
         display: none;
     }
@@ -53,7 +54,9 @@
     .switchComponent {
         display: flex;
         position: fixed;
+        left: 0;
         bottom: 1em;
+        width: 100vw;
         justify-content: center;
         align-items: center;
     }
