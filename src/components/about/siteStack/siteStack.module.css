@@ -5,9 +5,17 @@
     margin-top: 1rem;
 }
 
-.stackList {
+.iconList {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    margin-left: 1rem;
+    margin-top: 1rem;
+}
+
+.stackList {
     color: var(--color4);
     margin-left: 1rem;
+    margin-top: 1rem;
 }
