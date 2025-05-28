@@ -1,4 +1,3 @@
-import globalStyles from "@/components/about/about.module.css";
 import styles from "./iconography.module.css"
 import path from "path";
 import {promises as fs} from "fs";
@@ -27,8 +26,7 @@ export default async function Iconography() {
             <div className={styles.iconList}>
                 {data.map((icon: iconType, index: number) => (
                     <div key={index} className={styles.iconItem}>
-                        <p>{icon.name}</p>
-                        <p> {">"} </p>
+                        <p>{icon.name}: </p>
                         <a href={icon.url}> {icon.url} </a>
                     </div>
                 ))}

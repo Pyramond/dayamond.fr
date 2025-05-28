@@ -16,12 +16,13 @@
 
 .stackList {
     color: var(--color4);
+    font-family: "Space Grotesk", sans-serif;
     margin-left: 1rem;
     margin-top: 1rem;
 }
 
-
 @media (max-width: 768px) {
+
     .subtitle {
         font-size: 1.5rem;
         margin: 1rem;

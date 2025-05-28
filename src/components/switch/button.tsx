@@ -29,7 +29,8 @@ export default function Button({ image, page }: Props) {
             style={{ opacity: pathname == page ? 0.5 : 1 }}
             whileHover={{
                 scale: 1.2,
-                y: -5
+                y: -5,
+                transition: { type: "spring", stiffness: 300 }
             }}
             whileTap={{
                 scale: 0.8,

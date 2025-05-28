@@ -10,6 +10,7 @@
     align-items: center;
     gap: 0.5rem;
     color: var(--color4);
+    font-family: "Space Grotesk", sans-serif;
 }
 
 .iconList {
@@ -22,5 +23,4 @@
         font-size: 1.5rem;
         margin: 1rem;
     }
-
 }
