@@ -11,12 +11,14 @@
     flex-direction: row;
     align-items: flex-start;
     z-index: 2;
+    max-width: 30vw;
 }
 
 .right {
     height: 100vh;
     overflow-y: auto;
     min-width: 0;
+    width: 100vw;
 }
 
 @media (max-width: 768px) {
