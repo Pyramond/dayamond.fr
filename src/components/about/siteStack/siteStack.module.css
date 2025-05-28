@@ -5,12 +5,20 @@
     margin-top: 1rem;
 }
 
-.stackList {
+.iconList {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    margin-left: 1rem;
+    margin-top: 1rem;
+}
+
+.stackList {
     color: var(--color4);
     font-family: "Space Grotesk", sans-serif;
     margin-left: 1rem;
+    margin-top: 1rem;
 }
 
 @media (max-width: 768px) {
@@ -19,4 +27,5 @@
         font-size: 1.5rem;
         margin: 1rem;
     }
+
 }

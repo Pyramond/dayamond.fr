@@ -1,14 +1,14 @@
 [
   {
-    "name": "NextJS",
+    "name": "nextjs",
     "url": "https://nextjs.org/"
   },
   {
-    "name": "GSAP",
+    "name": "gsap",
     "url": "https://gsap.com/"
   },
   {
-    "name": "Framer Motion",
+    "name": "motion",
     "url": "https://motion.dev/"
   }
 ]
