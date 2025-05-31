@@ -8,22 +8,21 @@ interface Presentation {
     presentation: string;
 }
 
-async function getPresentation(): Promise<Presentation> {
+async function getPresentation(): Promise<string> {
 
-    const filePath = path.join(process.cwd(), "public", "presentation.json");
+    const filePath = path.join(process.cwd(), "public", "presentation.txt");
     const file = await fs.readFile(filePath, "utf-8");
-    const data = JSON.parse(file);
-    return data || {};
+    return file.toString();
 }
 
 export default async function Presentation() {
 
-    const data: Presentation = await getPresentation();
+    const data: string = await getPresentation();
 
     return (
         <div className={styles.presentation}>
             <h1 className={styles.title}>Presentation</h1>
-            <PresentationText presentation={data ? data.presentation : "chargement..."} />
+            <PresentationText presentation={data ? data : "chargement..."} />
         </div>
     );
 }
