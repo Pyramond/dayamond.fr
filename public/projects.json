@@ -26,5 +26,10 @@
     "title": "Tapo Hub",
     "year": "2023",
     "description": "Tapo Hub est une app codée avec NextJS et bootstrap qui a pour but de controller des ampoules connectées TP-Link TAPO"
+  },
+  {
+    "title": "MGB",
+    "year": "2024",
+    "description": "MGB est un site web permettant de gérer sa bibliothèque de jeux. Les utilisateurs pouvaient se connecter, puis ajouter des jeux à leur bibliothèque en spécifiant s'ils l'avaient fini ou non, leur temps de jeu, etc. De plus, ils pouvaient voir toutes les informations concernant un jeu (nom, description, plateforme, temps moyen...). Ce site a été codé avec ReactJS, NestJS et l'API de HowLongToBeat."
   }
 ]
