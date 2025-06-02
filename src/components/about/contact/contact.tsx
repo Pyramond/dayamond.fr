@@ -1,14 +1,9 @@
 import globalStyles from "@/components/about/about.module.css"
 import styles from "./contact.module.css"
-import Image from "next/image"
 import path from "path";
-import {promises as fs} from "fs";
-
-interface ContactType {
-    icon: string;
-    value: string;
-    link: string;
-}
+import { promises as fs } from "fs";
+import ContactType from "@/components/about/contact/ContactType.interface";
+import ContactItem from "@/components/about/contact/contactItem";
 
 async function getData(): Promise<Array<ContactType>> {
     const filePath = path.join(process.cwd(), "public", "contact.json");
@@ -27,18 +22,7 @@ export default async function Contact() {
 
         <div className={styles.contactList}>
             {data.map((item, index) => (
-                <div key={index} className={styles.contactItem}>
-                    <a href={item.link}>
-                        <Image
-                            src={`/images/${item.icon}.svg`}
-                            alt={`${item.icon} icon`}
-                            width={SIZE}
-                            height={SIZE}
-                        />
-                    </a>
-
-                    <p className={styles.contactValue}> {item.value} </p>
-                </div>
+                <ContactItem key={index} contact={item} SIZE={SIZE} />
             ))}
         </div>
     </div>

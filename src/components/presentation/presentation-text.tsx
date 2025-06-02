@@ -5,6 +5,7 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { useRef } from "react";
 import { SplitText } from "gsap/SplitText";
+import React from "react";
 
 interface Props {
     presentation: string;
@@ -33,7 +34,12 @@ export function PresentationText({ presentation }: Props) {
 
     return (
         <p className={styles.content} ref={presentationRef}>
-            {presentation}
+            {presentation.split('\n').map((line, i) => (
+                <React.Fragment key={i}>
+                    {line.substring(0, line.length - 2)}
+                    <br />
+                </React.Fragment>
+            ))}
         </p>
     );
 }
