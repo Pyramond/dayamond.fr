@@ -1,0 +1,44 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+}
+
+.left {
+    height: 100vh;
+    position: sticky;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    z-index: 2;
+    max-width: 30vw;
+}
+
+.right {
+    height: 100vh;
+    overflow-y: auto;
+    min-width: 0;
+    width: 100vw;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column !important;
+        height: auto;
+    }
+    .left {
+        position: static;
+        width: 100%;
+        max-width: none;
+        min-width: 0;
+        height: auto;
+        background: none;
+    }
+    .separator {
+        display: none;
+    }
+    .right {
+        height: auto;
+        overflow-y: visible;
+    }
+}

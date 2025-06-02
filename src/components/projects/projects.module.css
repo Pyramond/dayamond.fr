@@ -1,0 +1,102 @@
+.title {
+    font-family: Bebas Neue, serif;
+    color: var(--color4);
+    font-size: 7rem;
+}
+
+.projects {
+    margin-top: 3em;
+}
+
+.projectsList {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2rem; /* ICI */
+    margin-bottom: 4rem;
+}
+
+.projectCard {
+    background-color: var(--secondary);
+    width: 45vh;
+    height: 30vh;
+    border-radius: 2rem;
+    padding: 1rem;
+    overflow: hidden;
+}
+
+.text {
+    color: var(--color4);
+    font-family: "Space Grotesk", serif;
+    font-size: 0.9rem; /* ICI */
+}
+
+.cardTitle {
+    color: var(--color4);
+    font-family: Bebas Neue, serif;
+    font-size: 3rem;
+}
+
+.headerTitle {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: baseline;
+    gap: 0.2vw;
+}
+
+.year {
+    opacity: 0.8;
+}
+
+.cardHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.openProject:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+@media (min-width: 1921px) {
+    .text {
+        font-size: 1.2rem;
+    }
+
+    .projectsList {
+        gap: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 4rem;
+        margin: 1rem;
+    }
+
+    .projectCard {
+        margin: 1rem;
+    }
+
+    .text {
+        font-size: 0.8rem
+    }
+
+    .cardTitle {
+        font-size: 2rem;
+    }
+
+    .projectsList {
+        gap: 0;
+    }
+
+    .projectLink {
+        height: 2rem;
+    }
+
+    .headerTitle {
+        gap: 0.5vw;
+    }
+}

@@ -1,0 +1,9 @@
+.socials {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.social:hover {
+    cursor: pointer;
+}

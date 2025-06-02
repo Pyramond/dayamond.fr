@@ -1,31 +1,49 @@
-import { PageContext } from "@/context/page-context";
+'use client'
+
 import styles from "./switch.module.css"
 import Image from "next/image";
-import {useContext} from "react";
+import { useRouter } from "next/navigation";
+import { usePathname} from "next/navigation";
+import { motion } from "framer-motion";
 
 interface Props {
-    n: number,
-    image: string
+    image: string,
+    page: string,
 }
 
-export default function Button({ n, image }: Props) {
+export default function Button({ image, page }: Props) {
 
     const SIZE: number = 30;
-    const { value, setValue } = useContext(PageContext);
+    const pathname = usePathname();
+    const router = useRouter();
+
 
     function handleClick() {
-        setValue(n);
+        router.replace(page)
     }
 
     return (
-        <div className={styles.button} onClick={handleClick} style={{ opacity: n == value ? 0.5 : 1 }}>
+        <motion.div
+            className={styles.button}
+            onClick={handleClick}
+            style={{ opacity: pathname == page ? 0.5 : 1 }}
+            whileHover={{
+                scale: 1.2,
+                y: -5,
+                transition: { type: "spring", stiffness: 300 }
+            }}
+            whileTap={{
+                scale: 0.8,
+                y: 0,
+            }}
+        >
             <Image
-                src={`/${image}.svg`}
+                src={`/images/${image}.svg`}
                 width={SIZE}
                 height={SIZE}
                 alt={image}
                 className={styles.image}
             />
-        </div>
+        </motion.div>
     )
 };

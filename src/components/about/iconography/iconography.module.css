@@ -1,0 +1,26 @@
+.subtitle {
+    font-family: Bebas Neue, serif;
+    color: var(--color4);
+    font-size: 2rem;
+}
+
+.iconItem {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--color4);
+    font-family: "Space Grotesk", sans-serif;
+}
+
+.iconList {
+    margin-left: 1rem;
+    margin-top: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .subtitle {
+        font-size: 1.5rem;
+        margin: 1rem;
+    }
+}

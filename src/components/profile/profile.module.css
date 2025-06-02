@@ -1,5 +1,5 @@
 .profile {
-    margin: 3em 0.5em 3em 3em;
+    margin: 3em 0 3em 3em;
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -13,7 +13,8 @@
 
 .infos {
     position: relative;
-    left: 2em
+    left: 2em;
+    margin-bottom: 2em;
 }
 
 .info {
@@ -23,12 +24,40 @@
 }
 
 .socials {
-    display: flex;
-    flex-direction: row;
-    margin-top: 3em;
+    margin-top: 1em;
 }
 
-.social:hover {
-    opacity: 0.7;
-    cursor: pointer;
+.socialComponent {
+    position: relative;
+    left: 0.5em;
+}
+
+
+.subtitle {
+    color: var(--color4);
+    font-family: Bebas Neue, serif;
+    font-size: 2em;
+    margin-bottom: 0.5em;
+}
+
+
+@media (max-width: 768px) {
+    .profile {
+        align-items: baseline;
+        margin-bottom: 0;
+    }
+
+    .socials {
+        display: none;
+    }
+
+    .switchComponent {
+        display: flex;
+        position: fixed;
+        left: 0;
+        bottom: 1em;
+        width: 100vw;
+        justify-content: center;
+        align-items: center;
+    }
 }

@@ -1,0 +1,35 @@
+[
+  {
+    "title": "OneBlind",
+    "year": "2023-2025",
+    "description": "OneBlind est un directeur de poker en ligne. Il permet de gérer une partie de poker, y compris les blinds, les recaves et les joueurs. OneBlind offre la possibilité de créer sa propre structure de blinds, d'ajouter des joueurs, de consulter l'historique des parties et bien plus encore. Ce projet a été codé avec React et FastAPI.",
+    "source": {
+      "title": "github",
+      "url": "https://github.com/Pyramond/OneBlind"
+    }
+  },
+  {
+    "title": "dayamond.fr",
+    "year": "2025",
+    "description": "Ce site est une sorte de portfolio et de site de présentation. Il permet de découvrir mes projets et d'en savoir plus sur moi. À noter que mon site ne contient pas l'ensemble de mes projets, mais seulement les plus pertinents. Ce site est codé avec le framework NextJS.",
+    "source": {
+      "title": "github",
+      "url": "https://github.com/Pyramond/dayamond.fr"
+    }
+  },
+  {
+    "title": "Recipe book",
+    "year": "2025",
+    "description": "Une application iOS créée avec React Native et Firebase. Elle a pour but de gérer les recettes de cuisine d'un utilisateur. Avec cette application, on peut ajouter, supprimer et consulter ses recettes. Le dépôt Git n'est pas encore accessible. Elle devrait être publiée sur l'App Store à la fin de son développement."
+  },
+  {
+    "title": "Tapo Hub",
+    "year": "2023",
+    "description": "Tapo Hub est une app codée avec NextJS et bootstrap qui a pour but de controller des ampoules connectées TP-Link TAPO"
+  },
+  {
+    "title": "MGB",
+    "year": "2024",
+    "description": "MGB est un site web permettant de gérer sa bibliothèque de jeux. Les utilisateurs pouvaient se connecter, puis ajouter des jeux à leur bibliothèque en spécifiant s'ils l'avaient fini ou non, leur temps de jeu, etc. De plus, ils pouvaient voir toutes les informations concernant un jeu (nom, description, plateforme, temps moyen...). Ce site a été codé avec ReactJS, NestJS et l'API de HowLongToBeat."
+  }
+]

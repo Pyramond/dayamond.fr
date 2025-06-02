@@ -1,22 +1,28 @@
-'use client'
-import { useEffect, useState } from "react";
 import styles from "./presentation.module.css";
+import { promises as fs } from "fs";
+import path from "path";
+import { PresentationText } from "@/components/presentation/presentation-text";
 
-export default function Presentation() {
-    const [data, setData] = useState<{presentation?: string} | null>(null);
 
-    useEffect(() => {
-        fetch(`${process.env.NEXT_PUBLIC_URL}/presentation.json`, { cache: "no-store" })
-            .then(res => res.json())
-            .then(data => setData(data));
-    }, []);
+interface Presentation {
+    presentation: string;
+}
 
-    if (!data) return <div className={styles.presentation}>Chargement…</div>;
+async function getPresentation(): Promise<string> {
+
+    const filePath = path.join(process.cwd(), "public", "presentation.txt");
+    const file = await fs.readFile(filePath, "utf-8");
+    return file.toString();
+}
+
+export default async function Presentation() {
+
+    const data: string = await getPresentation();
 
     return (
         <div className={styles.presentation}>
             <h1 className={styles.title}>Presentation</h1>
-            <p className={styles.content}>{data.presentation}</p>
+            <PresentationText presentation={data ? data : "chargement..."} />
         </div>
     );
 }
