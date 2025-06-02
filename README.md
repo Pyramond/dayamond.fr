@@ -8,7 +8,7 @@ Il est codé avec NextJS, GSAP et Framer Motion. <br>
 
 ## Installation
 
-Créer un doccier .env.local a la racine du projet et y mettre l'url du site.
+Créer un dossier .env.local a la racine du projet et y mettre l'url du site.
 
 ```
 NEXT_PUBLIC_URL=http://0.0.0.0:0000
