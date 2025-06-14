@@ -30,6 +30,6 @@
   {
     "title": "MGB",
     "year": "2024",
-    "description": "MGB est un site web permettant de gérer sa bibliothèque de jeux. Les utilisateurs pouvaient se connecter, puis ajouter des jeux à leur bibliothèque en spécifiant s'ils l'avaient fini ou non, leur temps de jeu, etc. De plus, ils pouvaient voir toutes les informations concernant un jeu (nom, description, plateforme, temps moyen...). Ce site a été codé avec ReactJS, NestJS et l'API de HowLongToBeat."
+    "description": "MGB est un site web permettant de gérer sa bibliothèque de jeux. Les utilisateurs pouvaient ajouter des jeux à leur bibliothèque en spécifiant s'ils l'avaient fini ou non, leur temps de jeu, etc. De plus, ils pouvaient voir toutes les informations concernant un jeu. Ce site a été codé avec ReactJS, NestJS et une API externe."
   }
 ]
