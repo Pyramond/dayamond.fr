@@ -3,11 +3,11 @@
     width: 1px;
     height: 90vh;
     background-color: var(--tertiary);
-    margin: 3em 30px 3em 30px;
+    margin: 3em 3em 3em 30px;
 }
 
 @media (min-width: 1921px) {
     .separator {
-        margin: 3em 15px 3em -50px;
+        margin: 3em 3em 3em -50px;
     }
 }
