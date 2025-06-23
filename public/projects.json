@@ -18,9 +18,13 @@
     }
   },
   {
-    "title": "Recipe book",
+    "title": "Recipe App",
     "year": "2025",
-    "description": "Une application iOS créée avec React Native et Firebase. Elle a pour but de gérer les recettes de cuisine d'un utilisateur. Avec cette application, on peut ajouter, supprimer et consulter ses recettes. Le dépôt Git n'est pas encore accessible. Elle devrait être publiée sur l'App Store à la fin de son développement."
+    "description": "Une application iOS créée avec React Native et Firebase. Elle a pour but de gérer les recettes de cuisine d'un utilisateur. Avec cette application, on peut ajouter, supprimer, consulter et partager ses recettes.",
+    "source": {
+      "title": "github",
+      "url": "https://github.com/Pyramond/recipe-app"
+    }
   },
   {
     "title": "Tapo Hub",
