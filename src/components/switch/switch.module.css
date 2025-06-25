@@ -3,7 +3,6 @@
     flex-direction: row;
     gap: 0.5rem;
     position: relative;
-    left: 2em;
     margin-top: 1em
 }
 
@@ -12,8 +11,8 @@
     align-items: center;
     justify-content: center;
     background-color: var(--secondary);
-    padding: 2px 7px 2px 7px;
-    border-radius: 5px;
+    padding: 4px 13px 4px 13px;
+    border-radius: 25px;
 }
 
 .button:hover {
