@@ -42,15 +42,3 @@ export default async function Iconography() {
         </div>
     )
 }
-
-
-/*
-            <div className={styles.iconList}>
-                {data.map((icon: iconType, index: number) => (
-                    <div key={index} className={styles.iconItem}>
-                        <p>{icon.name}: </p>
-                        <a href={icon.url}> {icon.url} </a>
-                    </div>
-                ))}
-            </div>
- */
