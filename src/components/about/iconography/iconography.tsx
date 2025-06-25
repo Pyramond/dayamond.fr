@@ -23,14 +23,22 @@ export default async function Iconography() {
         <div>
             <h2 className={styles.subtitle}>Iconographie</h2>
 
-            <div className={styles.iconList}>
-                {data.map((icon: iconType, index: number) => (
-                    <div key={index} className={styles.iconItem}>
-                        <p>{icon.name}: </p>
-                        <a href={icon.url}> {icon.url} </a>
-                    </div>
-                ))}
-            </div>
+            <table className={styles.iconList}>
+                <thead>
+                <tr>
+                    <th className={styles.item}>Usage</th>
+                    <th className={styles.item}>Source</th>
+                </tr>
+                </thead>
+                <tbody>
+                    {data.map((icon: iconType, index: number) => (
+                        <tr key={index}>
+                            <td className={styles.item}>{icon.name}</td>
+                            <td className={styles.item}>{icon.url}</td>
+                        </tr>
+                    ))}
+                </tbody>
+            </table>
         </div>
     )
 }

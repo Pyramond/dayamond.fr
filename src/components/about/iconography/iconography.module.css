@@ -4,13 +4,10 @@
     font-size: 2rem;
 }
 
-.iconItem {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 0.5rem;
+.item {
+    border: 1px solid var(--tertiary);
+    padding: 8px 10px;
     color: var(--color4);
-    font-family: "Space Grotesk", sans-serif;
 }
 
 .iconList {
