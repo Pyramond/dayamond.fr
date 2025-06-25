@@ -6,7 +6,7 @@ import SiteStack from "@/components/about/siteStack/siteStack";
 export default function About() {
     return (
         <div className={styles.about}>
-            <h1 className={styles.title}>A propos</h1>
+            <h1 className={styles.title}>À propos</h1>
             <Contact />
 
             <div className={styles.site}>
