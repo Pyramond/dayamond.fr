@@ -34,6 +34,7 @@ export default function GamesList({ items, title, direction, type, width, height
             speed={30}
             direction={direction ? direction : "right"}
             style={{ width: '100%', height: `${height}px` }}
+            autoFill={true}
         >
             {items.map((item, index) => (
                 <MotionImage
