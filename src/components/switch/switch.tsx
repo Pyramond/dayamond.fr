@@ -8,7 +8,7 @@ export default function Switch() {
             <Button image={"avatar"} page={"/"} />
             <Button image={"book"} page={"/stack"} />
             <Button image={"box"} page={"/projects"} />
-            <Button image={"controller"} page={"/games"} />
+            <Button image={"pen"} page={"/interest"} />
             <Button image={"globe"} page={"/about"} />
         </div>
     )
