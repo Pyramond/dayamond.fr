@@ -10,5 +10,9 @@
   {
     "name": "motion",
     "url": "https://motion.dev/"
+  },
+  {
+    "name": "npm",
+    "url": "https://www.npmjs.com/package/react-fast-marquee"
   }
 ]
