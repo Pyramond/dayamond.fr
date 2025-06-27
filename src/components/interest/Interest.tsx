@@ -5,17 +5,24 @@ import List from "./List";
 
 export default async function Interest() {
 
-    const filePath = path.join(process.cwd(), "public", "games.json");
-    const file = await fs.readFile(filePath, "utf-8");
-    const data = JSON.parse(file);
+    let filePath = path.join(process.cwd(), "public", "games.json");
+    let file = await fs.readFile(filePath, "utf-8");
+    let data = JSON.parse(file);
     const games = data["games"] || [];
+
+    filePath = path.join(process.cwd(), "public", "movies.json");
+    file = await fs.readFile(filePath, "utf-8");
+    data = JSON.parse(file);
+    const movies = data["movies"] || [];
+
 
 
     return (
         <div className={styles.interest}>
             <h1 className={styles.title}>centres d'interêts</h1>
 
-            <List items={games} title={"Jeux"} type={"games"} />
+            <List items={games} title={"Jeux"} type={"games"} SIZE={300} />
+            <List items={movies} title={"Films"} type={"movies"} SIZE={150} direction={"left"} />
         </div>
     )
 }
