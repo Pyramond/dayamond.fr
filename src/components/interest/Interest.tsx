@@ -21,8 +21,8 @@ export default async function Interest() {
         <div className={styles.interest}>
             <h1 className={styles.title}>centres d'interêts</h1>
 
-            <List items={games} title={"Jeux"} type={"games"} SIZE={300} />
-            <List items={movies} title={"Films"} type={"movies"} SIZE={150} direction={"left"} />
+            <List items={games} title={"Jeux"} type={"games"} width={300} height={150} />
+            <List items={movies} title={"Films"} type={"movies"} width={150} height={300} direction={"left"} />
         </div>
     )
 }

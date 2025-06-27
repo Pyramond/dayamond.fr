@@ -9,29 +9,28 @@ interface Props {
     title: string,
     type: string,
     direction?: "right" | "left",
-    SIZE: number,
+    height: number
+    width: number
 }
 
-export default function GamesList({ items, title, direction, type, SIZE }: Props) {
+export default function GamesList({ items, title, direction, type, width, height }: Props) {
 
     const MotionImage = motion(Image);
 
     return <div>
 
         <h2 className={styles.subtitle}>{title}</h2>
-
             <Marquee
                 pauseOnHover={true}
                 speed={30}
                 direction={direction ? direction : "right"}
-                style={{ overflow: 'visible' }}
+                style={{ width: '100%', height: `${height}px` }}
             >
                 {items.map((item, index) => (
                     <MotionImage
                         src={`/images/${type}/${item}.jpg`}
-                        width={SIZE}
-                        height={1}
-                        style={{ width: `${SIZE}px`, height: "auto" }}
+                        width={width}
+                        height={height}
                         alt={item}
                         key={index}
                         className={styles.item}
@@ -43,6 +42,5 @@ export default function GamesList({ items, title, direction, type, SIZE }: Props
                     />
                 ))}
             </Marquee>
-
     </div>
 }
