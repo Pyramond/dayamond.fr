@@ -17,7 +17,6 @@ export default function GridDisplay({ list, type }: Props) {
 
     return (
         <div className={styles.games}>
-            <h1 className={styles.title}>Mes jeux favoris</h1>
             <div className={styles.listGames}>
                 {list.map((item, index) => (
                     <MotionImage
