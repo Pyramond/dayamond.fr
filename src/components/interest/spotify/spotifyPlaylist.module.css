@@ -1,0 +1,15 @@
+.title {
+    color: var(--color4);
+    font-family: Bebas Neue, serif;
+    font-size: 3em;
+    margin-bottom: 0.5em;
+}
+
+
+@media (max-width: 768px) {
+
+    .title {
+        font-size: 1.5rem;
+        margin: 1rem;
+    }
+}
