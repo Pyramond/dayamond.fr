@@ -13,9 +13,7 @@
     display: inline-block;
 }
 
-.hovTitle {}
-
-.hovTitle:hover {
+.subtitle:hover {
     cursor: pointer;
 }
 

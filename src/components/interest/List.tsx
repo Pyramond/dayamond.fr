@@ -12,22 +12,21 @@ interface Props {
     type: string,
     direction?: "right" | "left",
     height: number,
-    width: number,
-    url?: string
+    width: number
 }
 
-export default function GamesList({ items, title, direction, type, width, height, url }: Props) {
+export default function GamesList({ items, title, direction, type, width, height }: Props) {
 
     const MotionImage = motion(Image);
     const router = useRouter()
 
     const handleClick = (): void => {
-        if(url) router.push(url)
+        router.push(`/interest/${type}`)
     }
 
     return <div>
 
-        <h2 className={[styles.subtitle, url ? styles.hovTitle : ""].join(" ")} onClick={handleClick}>{title}</h2>
+        <h2 className={styles.subtitle} onClick={handleClick}>{title}</h2>
 
         <Marquee
             pauseOnHover={true}
